@@ -1,0 +1,1262 @@
+diff --git a/tools/debugserver/debugserver.xcodeproj/project.pbxproj b/tools/debugserver/debugserver.xcodeproj/project.pbxproj
+index d97b438ce..5d38ebca9 100644
+--- a/tools/debugserver/debugserver.xcodeproj/project.pbxproj
++++ b/tools/debugserver/debugserver.xcodeproj/project.pbxproj
+@@ -142,8 +142,8 @@
+ 		264D5D571293835600ED4C01 /* DNBArch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DNBArch.cpp; sourceTree = "<group>"; };
+ 		264F679A1B2F9EB200140093 /* JSONGenerator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSONGenerator.h; sourceTree = "<group>"; };
+ 		26593A060D4931CC001C9FE3 /* ChangeLog */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ChangeLog; sourceTree = "<group>"; };
+-		266B5ECF1460A68200E43F0A /* DNBArchImplARM64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DNBArchImplARM64.cpp; sourceTree = "<group>"; };
+-		266B5ED01460A68200E43F0A /* DNBArchImplARM64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNBArchImplARM64.h; sourceTree = "<group>"; };
++		266B5ECF1460A68200E43F0A /* DNBArchImplARM64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.cpp.cpp; path = DNBArchImplARM64.cpp; sourceTree = "<group>"; tabWidth = 2; };
++		266B5ED01460A68200E43F0A /* DNBArchImplARM64.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.h; path = DNBArchImplARM64.h; sourceTree = "<group>"; tabWidth = 2; };
+ 		2672DBEE0EEF446700E92059 /* PThreadMutex.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PThreadMutex.cpp; sourceTree = "<group>"; };
+ 		2675D4220CCEB705000F49AF /* DNBArchImpl.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = DNBArchImpl.cpp; path = arm/DNBArchImpl.cpp; sourceTree = "<group>"; };
+ 		2675D4230CCEB705000F49AF /* DNBArchImpl.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = DNBArchImpl.h; path = arm/DNBArchImpl.h; sourceTree = "<group>"; };
+@@ -163,10 +163,10 @@
+ 		26A8FE1E0D11A77B00203048 /* DNBTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNBTimer.h; sourceTree = "<group>"; };
+ 		26ACA3340D3E956300A2120B /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+ 		26B67DE00EE9BC30006C8BC0 /* MachTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MachTask.h; sourceTree = "<group>"; };
+-		26B67DE10EE9BC30006C8BC0 /* MachTask.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MachTask.mm; sourceTree = "<group>"; };
+-		26C637D60C71334A0024798E /* DNB.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = DNB.cpp; sourceTree = "<group>"; };
++		26B67DE10EE9BC30006C8BC0 /* MachTask.mm */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.cpp.objcpp; path = MachTask.mm; sourceTree = "<group>"; tabWidth = 2; };
++		26C637D60C71334A0024798E /* DNB.cpp */ = {isa = PBXFileReference; fileEncoding = 30; indentWidth = 2; lastKnownFileType = sourcecode.cpp.cpp; path = DNB.cpp; sourceTree = "<group>"; tabWidth = 2; };
+ 		26C637D70C71334A0024798E /* DNB.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = DNB.h; sourceTree = "<group>"; };
+-		26C637D80C71334A0024798E /* DNBArch.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = DNBArch.h; sourceTree = "<group>"; };
++		26C637D80C71334A0024798E /* DNBArch.h */ = {isa = PBXFileReference; fileEncoding = 30; indentWidth = 2; lastKnownFileType = sourcecode.c.h; path = DNBArch.h; sourceTree = "<group>"; tabWidth = 2; };
+ 		26C637D90C71334A0024798E /* DNBBreakpoint.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = DNBBreakpoint.cpp; sourceTree = "<group>"; };
+ 		26C637DA0C71334A0024798E /* DNBBreakpoint.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = DNBBreakpoint.h; sourceTree = "<group>"; };
+ 		26C637DB0C71334A0024798E /* DNBDataRef.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = DNBDataRef.cpp; sourceTree = "<group>"; };
+@@ -184,11 +184,11 @@
+ 		26C637EB0C71334A0024798E /* DNBArchImplI386.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = DNBArchImplI386.h; sourceTree = "<group>"; };
+ 		26C637EE0C71334A0024798E /* MachException.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = MachException.cpp; sourceTree = "<group>"; };
+ 		26C637EF0C71334A0024798E /* MachException.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MachException.h; sourceTree = "<group>"; };
+-		26C637F00C71334A0024798E /* MachProcess.mm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.objcpp; path = MachProcess.mm; sourceTree = "<group>"; };
++		26C637F00C71334A0024798E /* MachProcess.mm */ = {isa = PBXFileReference; fileEncoding = 30; indentWidth = 2; lastKnownFileType = sourcecode.cpp.objcpp; path = MachProcess.mm; sourceTree = "<group>"; tabWidth = 2; };
+ 		26C637F10C71334A0024798E /* MachProcess.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MachProcess.h; sourceTree = "<group>"; };
+-		26C637F20C71334A0024798E /* MachThread.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = MachThread.cpp; sourceTree = "<group>"; };
+-		26C637F30C71334A0024798E /* MachThread.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MachThread.h; sourceTree = "<group>"; };
+-		26C637F40C71334A0024798E /* MachThreadList.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = MachThreadList.cpp; sourceTree = "<group>"; };
++		26C637F20C71334A0024798E /* MachThread.cpp */ = {isa = PBXFileReference; fileEncoding = 30; indentWidth = 2; lastKnownFileType = sourcecode.cpp.cpp; path = MachThread.cpp; sourceTree = "<group>"; tabWidth = 2; };
++		26C637F30C71334A0024798E /* MachThread.h */ = {isa = PBXFileReference; fileEncoding = 30; indentWidth = 2; lastKnownFileType = sourcecode.c.h; path = MachThread.h; sourceTree = "<group>"; tabWidth = 2; };
++		26C637F40C71334A0024798E /* MachThreadList.cpp */ = {isa = PBXFileReference; fileEncoding = 30; indentWidth = 2; lastKnownFileType = sourcecode.cpp.cpp; path = MachThreadList.cpp; sourceTree = "<group>"; tabWidth = 2; };
+ 		26C637F50C71334A0024798E /* MachThreadList.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MachThreadList.h; sourceTree = "<group>"; };
+ 		26C637F60C71334A0024798E /* MachVMMemory.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = MachVMMemory.cpp; sourceTree = "<group>"; };
+ 		26C637F70C71334A0024798E /* MachVMMemory.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MachVMMemory.h; sourceTree = "<group>"; };
+diff --git a/tools/debugserver/source/CMakeLists.txt b/tools/debugserver/source/CMakeLists.txt
+index 775a1a127..6f6331f9b 100644
+--- a/tools/debugserver/source/CMakeLists.txt
++++ b/tools/debugserver/source/CMakeLists.txt
+@@ -26,6 +26,8 @@ if (CXX_SUPPORTS_NO_EXTENDED_OFFSETOF)
+ endif ()
+ 
+ find_library(COCOA_LIBRARY Cocoa)
++find_library(FOUNDATION_LIBRARY Foundation)
++find_library(COREFOUNDATION_LIBRARY CoreFoundation)
+ add_subdirectory(MacOSX)
+ 
+ set(generated_mach_interfaces
+@@ -86,15 +88,28 @@ set(lldbDebugserverCommonSources
+   MacOSX/MachVMMemory.cpp
+   MacOSX/MachVMRegion.cpp
+   MacOSX/OsLogger.cpp
++
++  MacOSX/remote_memory.c
++  MacOSX/remote_call.c
++  MacOSX/remote_ports.c
++  MacOSX/task_ports.c
++  MacOSX/remote_ptrace.c
++  MacOSX/remote_sysctl.c
++  MacOSX/remote_pthread.c
++
+   ${generated_mach_interfaces}
+   ${DEBUGSERVER_VERS_GENERATED_FILE})
+ 
+ add_library(lldbDebugserverCommon ${lldbDebugserverCommonSources})
+ 
+ target_link_libraries(lldbDebugserverCommon
+-                      INTERFACE ${COCOA_LIBRARY}
++#                      INTERFACE ${COCOA_LIBRARY}
++                      INTERFACE ${FOUNDATION_LIBRARY}
++                      INTERFACE ${COREFOUNDATION_LIBRARY}
+                       lldbDebugserverMacOSX_I386
+                       lldbDebugserverMacOSX_X86_64
++                      lldbDebugserverMacOSX_ARM
++                      lldbDebugserverMacOSX_ARM64
+                       lldbDebugserverMacOSX_DarwinLog)
+ 
+ set(LLVM_OPTIONAL_SOURCES ${lldbDebugserverCommonSources})
+@@ -105,7 +120,7 @@ add_lldb_tool(debugserver INCLUDE_IN_FRAMEWORK
+     lldbDebugserverCommon
+   )
+ 
+-set(LLDB_CODESIGN_IDENTITY "lldb_codesign"
++set(LLDB_CODESIGN_IDENTITY "iPhone Developer: Ian Beer (ST22RRK97D)"
+   CACHE STRING "Identity used for code signing. Set to empty string to skip the signing step.")
+ if (NOT ("${LLDB_CODESIGN_IDENTITY}" STREQUAL ""))
+   execute_process(
+diff --git a/tools/debugserver/source/DNB.cpp b/tools/debugserver/source/DNB.cpp
+index 9c6c44d18..c9dd7cba6 100644
+--- a/tools/debugserver/source/DNB.cpp
++++ b/tools/debugserver/source/DNB.cpp
+@@ -31,7 +31,8 @@
+ #include <sched.h>
+ #endif
+ 
+-#define TRY_KQUEUE 1
++//PATCH
++//#define TRY_KQUEUE
+ 
+ #ifdef TRY_KQUEUE
+ #include <sys/event.h>
+@@ -53,6 +54,9 @@
+ #include "MacOSX/MachTask.h"
+ #include "MacOSX/ThreadInfo.h"
+ 
++//PATCH
++#include "MacOSX/remote_sysctl.h"
++
+ typedef std::shared_ptr<MachProcess> MachProcessSP;
+ typedef std::map<nub_process_t, MachProcessSP> ProcessMap;
+ typedef ProcessMap::iterator ProcessMapIter;
+@@ -276,6 +280,9 @@ static void *waitpid_thread(void *arg) {
+ #endif
+ #endif
+ 
++  printf("in waitpid thread, sleeping...\n");
++  sleep(100000000);
++    
+   while (1) {
+     pid_t child_pid = waitpid(pid, &status, 0);
+     DNBLogThreadedIf(LOG_PROCESS, "waitpid_thread (): waitpid (pid = %i, "
+@@ -465,7 +472,10 @@ nub_process_t DNBProcessAttach(nub_process_t attach_pid,
+       spawn_waitpid_thread(pid);
+     }
+   }
+-
++    
++  //PATCH: we don't stop it so leave it running!
++  //return pid;
++//#if 0
+   while (pid != INVALID_NUB_PROCESS) {
+     // Wait for process to start up and hit entry point
+     DNBLogThreadedIf(LOG_PROCESS, "%s DNBProcessWaitForEvent (%4.4x, "
+@@ -527,6 +537,7 @@ nub_process_t DNBProcessAttach(nub_process_t attach_pid,
+   }
+ 
+   return INVALID_NUB_PROCESS;
++//#endif
+ }
+ 
+ size_t GetAllInfos(std::vector<struct kinfo_proc> &proc_infos) {
+@@ -539,8 +550,9 @@ size_t GetAllInfos(std::vector<struct kinfo_proc> &proc_infos) {
+   // size the buffer appropriately.  sysctl's man page specifically suggests
+   // this approach, and says it returns a bit larger size than needed to
+   // handle any new processes created between then and now.
+-
+-  err = ::sysctl(name, namelen, NULL, &size, NULL, 0);
++  // PATCH
++  err = priv_sysctl(name, namelen, NULL, &size, NULL, 0);
++  //err = ::sysctl(name, namelen, NULL, &size, NULL, 0);
+ 
+   if ((err < 0) && (err != ENOMEM)) {
+     proc_infos.clear();
+@@ -553,6 +565,8 @@ size_t GetAllInfos(std::vector<struct kinfo_proc> &proc_infos) {
+   proc_infos.resize(size / sizeof(struct kinfo_proc));
+   size = proc_infos.size() *
+          sizeof(struct kinfo_proc); // Make sure we don't exceed our resize...
++  // PATCH
++  err = priv_sysctl(name, namelen, &proc_infos[0], &size, NULL, 0);
+   err = ::sysctl(name, namelen, &proc_infos[0], &size, NULL, 0);
+   if (err < 0) {
+     proc_infos.clear();
+diff --git a/tools/debugserver/source/DNBArch.h b/tools/debugserver/source/DNBArch.h
+index 317da70e6..0ad2d7a28 100644
+--- a/tools/debugserver/source/DNBArch.h
++++ b/tools/debugserver/source/DNBArch.h
+@@ -20,6 +20,8 @@
+ #include <mach/mach.h>
+ #include <stdio.h>
+ 
++#include <vector>
++
+ struct DNBRegisterValue;
+ struct DNBRegisterSetInfo;
+ class DNBArchProtocol;
+@@ -87,7 +89,20 @@ public:
+                                             bool also_set_on_task) {
+     return INVALID_NUB_HW_INDEX;
+   }
+-  virtual bool DisableHardwareBreakpoint(uint32_t hw_index) { return false; }
++  // PATCH
++  // don't use the hw_index for disabling breakpoints
++  //virtual bool DisableHardwareBreakpoint(uint32_t hw_index) { return false; }
++  virtual bool DisableHardwareBreakpoint(nub_addr_t addr, nub_size_t size) { return false; }
++    
++  // PATCH
++  // used to propagate hardware breakpoints to new threads:
++  virtual std::vector<nub_addr_t> GetHardwareBreakpointSummary() {
++    return std::vector<nub_addr_t>();
++  }
++  virtual void SetHardwareBreakpointSummary(std::vector<nub_addr_t> bps) {
++    return;
++  }
++  
+   virtual bool DisableHardwareWatchpoint(uint32_t hw_index,
+                                          bool also_set_on_task) {
+     return false;
+diff --git a/tools/debugserver/source/MacOSX/CMakeLists.txt b/tools/debugserver/source/MacOSX/CMakeLists.txt
+index 59b39a1bf..8a3819fd9 100644
+--- a/tools/debugserver/source/MacOSX/CMakeLists.txt
++++ b/tools/debugserver/source/MacOSX/CMakeLists.txt
+@@ -1,5 +1,5 @@
+-#add_subdirectory(arm64)
+-#add_subdirectory(arm)
++add_subdirectory(arm64)
++add_subdirectory(arm)
+ add_subdirectory(i386)
+ #add_subdirectory(ppc)
+ add_subdirectory(x86_64)
+diff --git a/tools/debugserver/source/MacOSX/MachProcess.mm b/tools/debugserver/source/MacOSX/MachProcess.mm
+index a93f72484..504f84c24 100644
+--- a/tools/debugserver/source/MacOSX/MachProcess.mm
++++ b/tools/debugserver/source/MacOSX/MachProcess.mm
+@@ -45,6 +45,8 @@
+ #include "CFBundle.h"
+ #include "CFString.h"
+ 
++#include "remote_sysctl.h"
++
+ #ifdef WITH_SPRINGBOARD
+ 
+ #include <CoreFoundation/CoreFoundation.h>
+@@ -782,9 +784,13 @@ JSONGenerator::ObjectSP MachProcess::GetLoadedDynamicLibrariesInfos(
+   int mib[4] = {CTL_KERN, KERN_PROC, KERN_PROC_PID, pid};
+   struct kinfo_proc processInfo;
+   size_t bufsize = sizeof(processInfo);
+-  if (sysctl(mib, (unsigned)(sizeof(mib) / sizeof(int)), &processInfo, &bufsize,
+-             NULL, 0) == 0 &&
+-      bufsize > 0) {
++  // PATCH
++  //if (sysctl(mib, (unsigned)(sizeof(mib) / sizeof(int)), &processInfo, &bufsize,
++  //           NULL, 0) == 0 &&
++  //    bufsize > 0) {
++  if (priv_sysctl(mib, (unsigned)(sizeof(mib) / sizeof(int)), &processInfo, &bufsize,
++               NULL, 0) == 0 &&
++        bufsize > 0) {
+     uint32_t pointer_size = 4;
+     if (processInfo.kp_proc.p_flag & P_LP64)
+       pointer_size = 8;
+@@ -926,9 +932,13 @@ MachProcess::GetAllLoadedLibrariesInfos(nub_process_t pid) {
+   int mib[4] = {CTL_KERN, KERN_PROC, KERN_PROC_PID, pid};
+   struct kinfo_proc processInfo;
+   size_t bufsize = sizeof(processInfo);
+-  if (sysctl(mib, (unsigned)(sizeof(mib) / sizeof(int)), &processInfo, &bufsize,
+-             NULL, 0) == 0 &&
+-      bufsize > 0) {
++    // PATCH
++  //if (sysctl(mib, (unsigned)(sizeof(mib) / sizeof(int)), &processInfo, &bufsize,
++  //           NULL, 0) == 0 &&
++//   bufsize > 0) {
++   if (priv_sysctl(mib, (unsigned)(sizeof(mib) / sizeof(int)), &processInfo, &bufsize,
++              NULL, 0) == 0 &&
++        bufsize > 0) {
+     uint32_t pointer_size = 4;
+     if (processInfo.kp_proc.p_flag & P_LP64)
+       pointer_size = 8;
+@@ -955,7 +965,11 @@ JSONGenerator::ObjectSP MachProcess::GetLibrariesInfoForAddresses(
+   int mib[4] = {CTL_KERN, KERN_PROC, KERN_PROC_PID, pid};
+   struct kinfo_proc processInfo;
+   size_t bufsize = sizeof(processInfo);
+-  if (sysctl(mib, (unsigned)(sizeof(mib) / sizeof(int)), &processInfo, &bufsize,
++    // PATCH
++  //if (sysctl(mib, (unsigned)(sizeof(mib) / sizeof(int)), &processInfo, &bufsize,
++  //           NULL, 0) == 0 &&
++  //    bufsize > 0) {
++  if (priv_sysctl(mib, (unsigned)(sizeof(mib) / sizeof(int)), &processInfo, &bufsize,
+              NULL, 0) == 0 &&
+       bufsize > 0) {
+     uint32_t pointer_size = 4;
+@@ -1239,6 +1253,12 @@ bool MachProcess::Kill(const struct timespec *timeout_abstime) {
+ bool MachProcess::Interrupt() {
+   nub_state_t state = GetState();
+   if (IsRunning(state)) {
++    // PATCH - do a manual stop:
++    m_task.Suspend();
++    m_thread_list.ProcessDidStop(this);
++    SetState(eStateStopped);
++    return true;
++#if 0
+     if (m_sent_interrupt_signo == 0) {
+       m_sent_interrupt_signo = SIGSTOP;
+       if (Signal(m_sent_interrupt_signo)) {
+@@ -1259,6 +1279,7 @@ bool MachProcess::Interrupt() {
+                                     "been received yet, interrupt aborted",
+                        m_sent_interrupt_signo);
+     }
++#endif
+   } else {
+     DNBLogThreadedIf(LOG_PROCESS, "MachProcess::Interrupt() - process already "
+                                   "stopped, no interrupt sent");
+@@ -2369,7 +2390,13 @@ void *MachProcess::ProfileThread(void *arg) {
+   return NULL;
+ }
+ 
++#include "remote_ptrace.h"
++// want the remote address of this for the pthread hook
++//extern void* _pthread_introspection_hook;
++#include "remote_pthread.h"
++
+ pid_t MachProcess::AttachForDebug(pid_t pid, char *err_str, size_t err_len) {
++  printf("in attachfordebug\n");
+   // Clear out and clean up from any current state
+   Clear();
+   if (pid != 0) {
+@@ -2414,17 +2441,48 @@ pid_t MachProcess::AttachForDebug(pid_t pid, char *err_str, size_t err_len) {
+       return INVALID_NUB_PROCESS;
+     }
+ 
++    // PATCH
++    printf("about to try to PT_ATTACHEXC (skipping)\n");
++      
++#if 0
+     errno = 0;
+     if (::ptrace(PT_ATTACHEXC, pid, 0, 0))
+       err.SetError(errno);
+     else
+       err.Clear();
++#endif
++    err.Clear();
+ 
+     if (err.Success()) {
+       m_flags |= eMachProcessFlagsAttached;
+       // Sleep a bit to let the exception get received and set our process
+       // status
+       // to stopped.
++
++      // PATCH:
++      // do this *before* suspending the task!
++      // let's also install a crash hook at _pthread_introspection_hook:
++      printf("installing thread hook\n");
++      uint64_t pthread_hook_sentinel = 0xf00df00df00d;
++      pthread_introspection_hook_t old_hook = remote_pthread_introspection_hook_install(m_task.TaskPort(), (pthread_introspection_hook_t)pthread_hook_sentinel);
++      printf("old pthread_introspection_hook was: 0x%llx\n", (uint64_t)old_hook);
++      
++      // manually stop the task
++      // the issue with doing this is that we don't know the architecture yet and have no idea about the threads
++      printf("manually suspending task\n");
++      
++      m_task.Suspend();
++
++      // get the thread state
++      m_thread_list.ProcessDidStop(this);
++      
++     // do the setstate afterwards
++      SetState(eStateStopped);
++
++
++      
++      // still won't have a current thread because we didn't stop in response to anything
++        
+       ::usleep(250000);
+       DNBLogThreadedIf(LOG_PROCESS, "successfully attached to pid %d", pid);
+       return m_pid;
+@@ -3172,7 +3230,9 @@ uint32_t MachProcess::GetCPUTypeForLocalProcess(pid_t pid) {
+ 
+   cpu_type_t cpu;
+   size_t cpu_len = sizeof(cpu);
+-  if (::sysctl(mib, static_cast<u_int>(len), &cpu, &cpu_len, 0, 0))
++    //PATCH
++  //if (::sysctl(mib, static_cast<u_int>(len), &cpu, &cpu_len, 0, 0))
++  if (priv_sysctl(mib, static_cast<u_int>(len), &cpu, &cpu_len, 0, 0))
+     cpu = 0;
+   return cpu;
+ }
+diff --git a/tools/debugserver/source/MacOSX/MachTask.mm b/tools/debugserver/source/MacOSX/MachTask.mm
+index bd7047ecd..8d4e35bbb 100644
+--- a/tools/debugserver/source/MacOSX/MachTask.mm
++++ b/tools/debugserver/source/MacOSX/MachTask.mm
+@@ -65,6 +65,11 @@ extern "C" {
+ #include <pmsample.h>
+ #endif
+ 
++#include "task_ports.h"
++#include "remote_call.h"
++#include "remote_ports.h"
++#include "remote_sysctl.h"
++
+ //----------------------------------------------------------------------
+ // MachTask constructor
+ //----------------------------------------------------------------------
+@@ -256,6 +261,7 @@ static void get_threads_profile_data(DNBProfileDataScanType scanType,
+       if ((scanType & eProfileThreadName) &&
+           (identifier_info.thread_handle != 0)) {
+         struct proc_threadinfo proc_threadinfo;
++          printf("get_threads_profile_data - proc_pidinfo\n");
+         int len = ::proc_pidinfo(pid, PROC_PIDTHREADINFO,
+                                  identifier_info.thread_handle,
+                                  &proc_threadinfo, PROC_PIDTHREADINFO_SIZE);
+@@ -293,8 +299,9 @@ std::string MachTask::GetProfileData(DNBProfileDataScanType scanType) {
+     int32_t mib[] = {CTL_HW, HW_AVAILCPU};
+     size_t len = sizeof(numCPU);
+     if (numCPU == -1) {
+-      if (sysctl(mib, sizeof(mib) / sizeof(int32_t), &numCPU, &len, NULL, 0) !=
+-          0)
++        // PATCH
++      if (priv_sysctl(mib, sizeof(mib) / sizeof(int32_t), &numCPU, &len, NULL, 0) != 0)
++      //if (sysctl(mib, sizeof(mib) / sizeof(int32_t), &numCPU, &len, NULL, 0) != 0)
+         return result;
+     }
+ 
+@@ -505,6 +512,37 @@ profile_data_stream << "inactive:" << vminfo.inactive_count * pagesize << ';';
+   return result;
+ }
+ 
++/*********** start patch **************/
++
++mach_port_t privileged_task_port = MACH_PORT_NULL;
++
++mach_port_t ps_control_task_for_pid(pid_t target_pid) {
++  printf("in ps_control_task_for_pid\n");
++  if (privileged_task_port == MACH_PORT_NULL) {
++    printf("don't have a privileged task port yet!\n");
++    return MACH_PORT_NULL;
++  }
++  refresh_task_ports_list(privileged_task_port);
++    
++  mach_port_t target_task_port = find_task_port_for_pid(target_pid);
++  printf("got port 0x%x for pid: %d\n", target_task_port, target_pid);
++  
++  if (target_task_port == privileged_task_port) {
++    // need to replace the priv port otherwise we'll deadlock
++    privileged_task_port = find_task_port_for_path("/usr/libexec/amfid");
++    
++    if (privileged_task_port == MACH_PORT_NULL || privileged_task_port == target_task_port) {
++      privileged_task_port = find_task_port_for_path("fseventsd");
++    }
++    
++    printf("replaced the priv port with: %x\n", privileged_task_port);
++  }
++  
++  return target_task_port;
++}
++
++/*********** end patch **************/
++
+ //----------------------------------------------------------------------
+ // MachTask::TaskPortForProcessID
+ //----------------------------------------------------------------------
+@@ -525,7 +563,13 @@ task_t MachTask::TaskPortForProcessID(pid_t pid, DNBError &err,
+     mach_port_t task_self = mach_task_self();
+     task_t task = TASK_NULL;
+     for (uint32_t i = 0; i < num_retries; i++) {
+-      err = ::task_for_pid(task_self, pid, &task);
++      task = ps_control_task_for_pid(pid);
++      if (task == MACH_PORT_NULL) {
++        err = KERN_FAILURE;
++      } else {
++        err = KERN_SUCCESS;
++      }
++      //err = ::task_for_pid(task_self, pid, &task);
+ 
+       if (DNBLogCheckLogBit(LOG_TASK) || err.Fail()) {
+         char str[1024];
+@@ -636,9 +680,37 @@ bool MachTask::StartExceptionThread(DNBError &err) {
+     }
+ 
+     // Set the ability to get all exceptions on this port
++      
++    // PATCH: we have to do this in the context of the task itself
++    // because AMFI has a hook which will disallow it:
++#if 0
++    mach_port_name_t remote_exception_port_name = push_local_port(task,
++                                                                  m_exception_port,
++                                                                  MACH_MSG_TYPE_MAKE_SEND);
++      
++    mach_port_name_t remote_task_self = (mach_port_name_t) call_remote(task, task_self_trap, 0);
++      
++    kern_return_t kerr = (kern_return_t) call_remote(task, task_set_exception_ports, 5,
++                                      REMOTE_LITERAL(remote_task_self),
++                                      REMOTE_LITERAL(m_exc_port_info.mask),
++                                      REMOTE_LITERAL(remote_exception_port_name), // send the port
++                                      REMOTE_LITERAL(EXCEPTION_DEFAULT | MACH_EXCEPTION_CODES), // we want to receive a catch_exception_raise message with the thread port for the crashing thread
++                                      REMOTE_LITERAL(THREAD_STATE_NONE));
++#endif
++    kern_return_t kerr = remote_set_exception_ports(task, m_exc_port_info.mask, m_exception_port,
++                                                      EXCEPTION_DEFAULT | MACH_EXCEPTION_CODES, THREAD_STATE_NONE);
++    if (kerr != KERN_SUCCESS){
++      printf("error setting target exception exception port: %s\n", mach_error_string(kerr));
++      err = KERN_FAILURE;
++    } else {
++      printf("set target exception port!\n");
++      err = KERN_SUCCESS;
++    }
++#if 0
+     err = ::task_set_exception_ports(
+         task, m_exc_port_info.mask, m_exception_port,
+         EXCEPTION_DEFAULT | MACH_EXCEPTION_CODES, THREAD_STATE_NONE);
++#endif
+     if (DNBLogCheckLogBit(LOG_EXCEPTIONS) || err.Fail()) {
+       err.LogThreaded("::task_set_exception_ports ( task = 0x%4.4x, "
+                       "exception_mask = 0x%8.8x, new_port = 0x%4.4x, behavior "
+@@ -648,12 +720,14 @@ bool MachTask::StartExceptionThread(DNBError &err) {
+                       THREAD_STATE_NONE);
+     }
+ 
++
+     if (err.Fail())
+       return false;
+ 
+     // Create the exception thread
+     err = ::pthread_create(&m_exception_thread, NULL, MachTask::ExceptionThread,
+                            this);
++    printf("started exception thread!\n");
+     return err.Success();
+   } else {
+     DNBLogError("MachTask::%s (): task invalid, exception thread start failed.",
+diff --git a/tools/debugserver/source/MacOSX/MachThread.cpp b/tools/debugserver/source/MacOSX/MachThread.cpp
+index 5686e42e4..5e65783de 100644
+--- a/tools/debugserver/source/MacOSX/MachThread.cpp
++++ b/tools/debugserver/source/MacOSX/MachThread.cpp
+@@ -536,6 +536,8 @@ bool MachThread::RestoreRegisterState(uint32_t save_id) {
+ }
+ 
+ uint32_t MachThread::EnableHardwareBreakpoint(const DNBBreakpoint *bp) {
++  // PATCH
++    printf("in MachThread::EnableHardwareBreakpoint\n");
+   if (bp != NULL && bp->IsBreakpoint())
+     return m_arch_ap->EnableHardwareBreakpoint(bp->Address(), bp->ByteSize());
+   return INVALID_NUB_HW_INDEX;
+@@ -557,11 +559,22 @@ bool MachThread::RollbackTransForHWP() {
+ bool MachThread::FinishTransForHWP() { return m_arch_ap->FinishTransForHWP(); }
+ 
+ bool MachThread::DisableHardwareBreakpoint(const DNBBreakpoint *bp) {
+-  if (bp != NULL && bp->IsHardware())
+-    return m_arch_ap->DisableHardwareBreakpoint(bp->GetHardwareIndex());
++  if (bp != NULL && bp->IsHardware()){
++    // PATCH
++    //return m_arch_ap->DisableHardwareBreakpoint(bp->GetHardwareIndex());
++    return m_arch_ap->DisableHardwareBreakpoint(bp->Address(), bp->ByteSize());
++  }
+   return false;
+ }
+ 
++std::vector<nub_addr_t> MachThread::GetHardwareBreakpointSummary() {
++  return m_arch_ap->GetHardwareBreakpointSummary();
++}
++
++void MachThread::SetHardwareBreakpointSummary(std::vector<nub_addr_t> bps) {
++  m_arch_ap->SetHardwareBreakpointSummary(bps);
++}
++
+ bool MachThread::DisableHardwareWatchpoint(const DNBBreakpoint *wp,
+                                            bool also_set_on_task) {
+   if (wp != NULL && wp->IsHardware())
+@@ -589,6 +602,7 @@ bool MachThread::GetIdentifierInfo() {
+ 
+ const char *MachThread::GetName() {
+   if (GetIdentifierInfo()) {
++      printf("MachThread::GetName proc_pidinfo\n");
+     int len = ::proc_pidinfo(m_process->ProcessID(), PROC_PIDTHREADINFO,
+                              m_ident_info.thread_handle, &m_proc_threadinfo,
+                              sizeof(m_proc_threadinfo));
+diff --git a/tools/debugserver/source/MacOSX/MachThread.h b/tools/debugserver/source/MacOSX/MachThread.h
+index a98d8aa2b..494db9a47 100644
+--- a/tools/debugserver/source/MacOSX/MachThread.h
++++ b/tools/debugserver/source/MacOSX/MachThread.h
+@@ -76,6 +76,9 @@ public:
+   uint32_t NumSupportedHardwareWatchpoints() const;
+   bool RollbackTransForHWP();
+   bool FinishTransForHWP();
++    
++  std::vector<nub_addr_t> GetHardwareBreakpointSummary();
++  void SetHardwareBreakpointSummary(std::vector<nub_addr_t> bps);
+ 
+   nub_state_t GetState();
+   void SetState(nub_state_t state);
+diff --git a/tools/debugserver/source/MacOSX/MachThreadList.cpp b/tools/debugserver/source/MacOSX/MachThreadList.cpp
+index 05e9627b5..263a9803b 100644
+--- a/tools/debugserver/source/MacOSX/MachThreadList.cpp
++++ b/tools/debugserver/source/MacOSX/MachThreadList.cpp
+@@ -20,6 +20,10 @@
+ #include "DNBThreadResumeActions.h"
+ #include "MachProcess.h"
+ 
++#include "remote_sysctl.h"
++
++#include <vector>
++
+ MachThreadList::MachThreadList()
+     : m_threads(), m_threads_mutex(PTHREAD_MUTEX_RECURSIVE),
+       m_is_64_bit(false) {}
+@@ -257,13 +261,19 @@ MachThreadList::UpdateThreadList(MachProcess *process, bool update,
+   DNBLogThreadedIf(LOG_THREAD, "MachThreadList::UpdateThreadList (pid = %4.4x, "
+                                "update = %u) process stop count = %u",
+                    process->ProcessID(), update, process->StopCount());
++  printf("trying to acquire m_threads_mutex\n");
+   PTHREAD_MUTEX_LOCKER(locker, m_threads_mutex);
++  printf("got it\n");
+ 
+   if (process->StopCount() == 0) {
+     int mib[4] = {CTL_KERN, KERN_PROC, KERN_PROC_PID, process->ProcessID()};
+     struct kinfo_proc processInfo;
+     size_t bufsize = sizeof(processInfo);
+-    if (sysctl(mib, (unsigned)(sizeof(mib) / sizeof(int)), &processInfo,
++    // PATCH
++      //if (sysctl(mib, (unsigned)(sizeof(mib) / sizeof(int)), &processInfo,
++    //           &bufsize, NULL, 0) == 0 &&
++    //    bufsize > 0) {
++    if (priv_sysctl(mib, (unsigned)(sizeof(mib) / sizeof(int)), &processInfo,
+                &bufsize, NULL, 0) == 0 &&
+         bufsize > 0) {
+       if (processInfo.kp_proc.p_flag & P_LP64)
+@@ -280,6 +290,9 @@ MachThreadList::UpdateThreadList(MachProcess *process, bool update,
+     else
+       DNBArchProtocol::SetArchitecture(CPU_TYPE_ARM);
+ #endif
++      //printf("forcing arch to ARM64\n");  // OLD PATCH
++      //m_is_64_bit = true;
++      //DNBArchProtocol::SetArchitecture(CPU_TYPE_ARM64);
+   }
+ 
+   if (m_threads.empty() || update) {
+@@ -336,7 +349,9 @@ MachThreadList::UpdateThreadList(MachProcess *process, bool update,
+                       thread_list_size);
+     }
+   }
++  printf("returnign from updatethreadlist\n");
+   return static_cast<uint32_t>(m_threads.size());
++
+ }
+ 
+ void MachThreadList::CurrentThread(MachThreadSP &thread_sp) {
+@@ -354,6 +369,11 @@ void MachThreadList::CurrentThread(MachThreadSP &thread_sp) {
+       }
+     }
+   }
++  // PATCH: just return the first thread if none are stopped for any reason:
++    if (m_current_thread == NULL) {
++        m_current_thread = m_threads[0]; // assumes there is at least one thread..
++        printf("spoofing current thread\n");
++    }
+   thread_sp = m_current_thread;
+ }
+ 
+@@ -444,8 +464,38 @@ uint32_t MachThreadList::ProcessDidStop(MachProcess *process) {
+   PTHREAD_MUTEX_LOCKER(locker, m_threads_mutex);
+   // Update our thread list
+   const uint32_t num_threads = UpdateThreadList(process, true);
++  printf("called updatethreadlist\n");
++  // PATCH
++  // we might have this stop because of a new thread event
++  // make sure all the threads have the same set of breakpoints
++
++  // for each thread, get a vector of bps which are set
++  std::vector<nub_addr_t> bps;
++  for (uint32_t idx = 0; idx < num_threads; ++idx) {
++    bps = m_threads[idx]->GetHardwareBreakpointSummary();
++    if (bps.size() > 0) {
++      printf("found a thread which has %zx bps set\n", bps.size());
++      // if the thread has any breakpoints set then it has all of them
++      break;
++    }
++  }
++  
++  // if there are any vectors with a length > 0
++  // set those bps on any threads which have no bps
++  if (bps.size() > 0) {
++    for (uint32_t idx = 0; idx < num_threads; ++idx) {
++      // actually just set them on every thread
++      printf("setting those breakpoints on thread %d\n", idx);
++      m_threads[idx]->SetHardwareBreakpointSummary(bps);
++    }
++  }
++  
++  //PATCH
++  printf("num_threads: %d\n", num_threads);
+   for (uint32_t idx = 0; idx < num_threads; ++idx) {
+-    m_threads[idx]->ThreadDidStop();
++      printf("calling thread did stop for thread %d\n", idx);
++      m_threads[idx]->ThreadDidStop();
++      printf("returned\n");
+   }
+   return num_threads;
+ }
+@@ -479,23 +529,36 @@ void MachThreadList::NotifyBreakpointChanged(const DNBBreakpoint *bp) {
+   }
+ }
+ 
++//PATCH - actually return the index
++// it could be different on each thread right?
++// which will cause problems! need to fix that!
+ uint32_t
+ MachThreadList::EnableHardwareBreakpoint(const DNBBreakpoint *bp) const {
++  uint32_t set_index = INVALID_NUB_HW_INDEX;
+   if (bp != NULL) {
+     const size_t num_threads = m_threads.size();
+-    for (uint32_t idx = 0; idx < num_threads; ++idx)
+-      m_threads[idx]->EnableHardwareBreakpoint(bp);
++    for (uint32_t idx = 0; idx < num_threads; ++idx) {
++      uint32_t new_index = m_threads[idx]->EnableHardwareBreakpoint(bp);
++      if (set_index == INVALID_NUB_HW_INDEX) {
++        set_index = new_index;
++      } else if (new_index != set_index) {
++        printf("this hardware breakpoint is being set at a different offset in this thread\n");
++      }
++    }
+   }
+-  return INVALID_NUB_HW_INDEX;
++  return set_index;
++  //return INVALID_NUB_HW_INDEX;
+ }
+-
++// PATCH
++// return true if we actually do disable the breakpoint in all threads
+ bool MachThreadList::DisableHardwareBreakpoint(const DNBBreakpoint *bp) const {
+   if (bp != NULL) {
+     const size_t num_threads = m_threads.size();
+     for (uint32_t idx = 0; idx < num_threads; ++idx)
+       m_threads[idx]->DisableHardwareBreakpoint(bp);
+   }
+-  return false;
++  //return false;
++  return true;
+ }
+ 
+ // DNBWatchpointSet() -> MachProcess::CreateWatchpoint() ->
+diff --git a/tools/debugserver/source/MacOSX/MachVMMemory.cpp b/tools/debugserver/source/MacOSX/MachVMMemory.cpp
+index 12f16ccb9..44374c228 100644
+--- a/tools/debugserver/source/MacOSX/MachVMMemory.cpp
++++ b/tools/debugserver/source/MacOSX/MachVMMemory.cpp
+@@ -19,6 +19,8 @@
+ #include <mach/shared_region.h>
+ #include <sys/sysctl.h>
+ 
++#include "remote_sysctl.h"
++
+ static const vm_size_t kInvalidPageSize = ~0;
+ 
+ MachVMMemory::MachVMMemory() : m_page_size(kInvalidPageSize), m_err(0) {}
+@@ -160,19 +162,26 @@ uint64_t MachVMMemory::GetStolenPages(task_t task) {
+     other_len = sizeof(other);
+ 
+     /* These are all declared as QUAD/uint64_t sysctls in the kernel. */
+-
+-    if (sysctl(mib_reserved, static_cast<u_int>(mib_reserved_len), &reserved,
++    // PATCH
++    if (priv_sysctl(mib_reserved, static_cast<u_int>(mib_reserved_len), &reserved,
+                &reserved_len, NULL, 0)) {
++    //if (sysctl(mib_reserved, static_cast<u_int>(mib_reserved_len), &reserved,
++    //           &reserved_len, NULL, 0)) {
+       return 0;
+     }
+ 
+-    if (sysctl(mib_unusable, static_cast<u_int>(mib_unusable_len), &unusable,
++    // PATCH
++    if (priv_sysctl(mib_unusable, static_cast<u_int>(mib_unusable_len), &unusable,
+                &unusable_len, NULL, 0)) {
++    //if (sysctl(mib_unusable, static_cast<u_int>(mib_unusable_len), &unusable,
++    //           &unusable_len, NULL, 0)) {
+       return 0;
+     }
+-
+-    if (sysctl(mib_other, static_cast<u_int>(mib_other_len), &other, &other_len,
++    // PATCH
++    if (priv_sysctl(mib_other, static_cast<u_int>(mib_other_len), &other, &other_len,
+                NULL, 0)) {
++    //if (sysctl(mib_other, static_cast<u_int>(mib_other_len), &other, &other_len,
++    //           NULL, 0)) {
+       return 0;
+     }
+ 
+diff --git a/tools/debugserver/source/MacOSX/arm/DNBArchImpl.cpp b/tools/debugserver/source/MacOSX/arm/DNBArchImpl.cpp
+index 2841ddb11..92c30f3fa 100644
+--- a/tools/debugserver/source/MacOSX/arm/DNBArchImpl.cpp
++++ b/tools/debugserver/source/MacOSX/arm/DNBArchImpl.cpp
+@@ -982,6 +982,8 @@ uint32_t DNBArchMachARM::NumSupportedHardwareWatchpoints() {
+ 
+ uint32_t DNBArchMachARM::EnableHardwareBreakpoint(nub_addr_t addr,
+                                                   nub_size_t size) {
++  // PATCH:
++  printf("in DNBArchMachARM::EnableHardwareBreakpoint\n");
+   // Make sure our address isn't bogus
+   if (addr & 1)
+     return INVALID_NUB_HW_INDEX;
+@@ -1053,26 +1055,33 @@ uint32_t DNBArchMachARM::EnableHardwareBreakpoint(nub_addr_t addr,
+   return INVALID_NUB_HW_INDEX;
+ }
+ 
+-bool DNBArchMachARM::DisableHardwareBreakpoint(uint32_t hw_index) {
+-  kern_return_t kret = GetDBGState(false);
+-
+-  const uint32_t num_hw_points = NumSupportedHardwareBreakpoints();
+-  if (kret == KERN_SUCCESS) {
+-    if (hw_index < num_hw_points) {
+-      m_state.dbg.__bcr[hw_index] = 0;
+-      DNBLogThreadedIf(LOG_BREAKPOINTS, "DNBArchMachARM::SetHardwareBreakpoint("
+-                                        " %u ) - BVR%u = 0x%8.8x  BCR%u = "
+-                                        "0x%8.8x",
+-                       hw_index, hw_index, m_state.dbg.__bvr[hw_index],
+-                       hw_index, m_state.dbg.__bcr[hw_index]);
+-
+-      kret = SetDBGState(false);
+-
+-      if (kret == KERN_SUCCESS)
+-        return true;
++// PATCH
++bool DNBArchMachARM::DisableHardwareBreakpoint(nub_addr_t addr, nub_size_t size) {
++    printf("in DNBArchMachARM::DisableHardwareBreakpoint to disable hw bp for addr: %llx size: %x\n", addr, size);
++    kern_return_t kret = GetDBGState(false);
++    if (kret != KERN_SUCCESS) {
++        printf("unable to get thread dbg state\n");
++        return false;
+     }
+-  }
+-  return false;
++    
++    const uint32_t num_hw_points = NumSupportedHardwareBreakpoints();
++    
++    for (uint32_t i = 0; i < num_hw_points; i++){
++        if (m_state.dbg.__bvr[i] != addr) {
++            continue;
++        }
++        // i is the offset of a hw_breakpoint with this address
++        m_state.dbg.__bcr[i] = 0;
++
++        printf("disabled hw breakpoint (found at offset %d in dbg state\n", i);
++        kret = SetDBGState(false);
++        
++        if (kret == KERN_SUCCESS) {
++            return true;
++        }
++    }
++    
++    return false;
+ }
+ 
+ // ARM v7 watchpoints may be either word-size or double-word-size.
+diff --git a/tools/debugserver/source/MacOSX/arm/DNBArchImpl.h b/tools/debugserver/source/MacOSX/arm/DNBArchImpl.h
+index e8622c4ec..ecaad6317 100644
+--- a/tools/debugserver/source/MacOSX/arm/DNBArchImpl.h
++++ b/tools/debugserver/source/MacOSX/arm/DNBArchImpl.h
+@@ -72,7 +72,8 @@ public:
+   virtual uint32_t NumSupportedHardwareBreakpoints();
+   virtual uint32_t NumSupportedHardwareWatchpoints();
+   virtual uint32_t EnableHardwareBreakpoint(nub_addr_t addr, nub_size_t size);
+-  virtual bool DisableHardwareBreakpoint(uint32_t hw_break_index);
++  // PATCH add this back later
++  virtual bool DisableHardwareBreakpoint(nub_addr_t addr, nub_size_t size);
+ 
+   virtual uint32_t EnableHardwareWatchpoint(nub_addr_t addr, nub_size_t size,
+                                             bool read, bool write,
+diff --git a/tools/debugserver/source/MacOSX/arm64/DNBArchImplARM64.cpp b/tools/debugserver/source/MacOSX/arm64/DNBArchImplARM64.cpp
+index 51bc5aaee..fbef90ef4 100644
+--- a/tools/debugserver/source/MacOSX/arm64/DNBArchImplARM64.cpp
++++ b/tools/debugserver/source/MacOSX/arm64/DNBArchImplARM64.cpp
+@@ -27,6 +27,8 @@
+ #include <inttypes.h>
+ #include <sys/sysctl.h>
+ 
++#include <vector>
++
+ // Break only in privileged or user mode
+ // (PAC bits in the DBGWVRn_EL1 watchpoint control register)
+ #define S_USER ((uint32_t)(2u << 1))
+@@ -448,7 +450,28 @@ void DNBArchMachARM64::ThreadWillResume() {
+ }
+ 
+ bool DNBArchMachARM64::NotifyException(MachException::Data &exc) {
+-
++  // PATCH:
++  // lets detect at this level whether this exception is as the result of the crash hook
++  // inserted
++  
++  GetGPRState(false);
++  uint64_t exception_pc = m_state.context.gpr.__pc;
++  
++  printf("exception_pc: %llx\n", exception_pc);
++  
++  if (exception_pc == 0xf00df00df00d) {
++    // we hit the thread event hook - fixup this crash
++    // and supress it.
++    printf("exception_pc matches the pthread sentinel!\n");
++    
++    // emulate a return:
++    SetPC(m_state.context.gpr.__lr);
++    
++    // make the exception type invalid so it will be ignored and the thread will continue
++    exc.exc_type = 0;
++    return true;
++  }
++  
+   switch (exc.exc_type) {
+   default:
+     break;
+@@ -587,6 +610,175 @@ static inline uint64_t bits(uint64_t value, uint32_t msbit, uint32_t lsbit) {
+   return value;                 // return our result
+ }
+ 
++//PATCH
++// arm64 hardware breakpoint support:
++uint32_t DNBArchMachARM64::NumSupportedHardwareBreakpoints() {
++	return 16;
++}
++
++uint32_t DNBArchMachARM64::EnableHardwareBreakpoint(nub_addr_t addr, nub_size_t size) {
++  // PATCH:
++  printf("in DNBArchMachARM64::EnableHardwareBreakpoint\n");
++  // Make sure our address isn't bogus - arm64 is 4 byte aligned, not two
++  if (addr & 1) {
++    return INVALID_NUB_HW_INDEX;
++  }
++
++  kern_return_t kret = GetDBGState(false);
++
++  if (kret == KERN_SUCCESS) {
++		printf("got hardware dbg state for this thread\n");
++    const uint32_t num_hw_breakpoints = NumSupportedHardwareBreakpoints();
++    uint32_t i;
++    for (i = 0; i < num_hw_breakpoints; ++i) {
++      if ((m_state.dbg.__bcr[i] & BCR_ENABLE) == 0)
++        break; // We found an available hw breakpoint slot (in i)
++    }
++
++    // See if we found an available hw breakpoint slot above
++    if (i < num_hw_breakpoints) {
++      // Make sure bits 1:0 are clear in our address
++      m_state.dbg.__bvr[i] = addr & ~((nub_addr_t)3);
++#if 0
++      if (size == 2 || addr & 2) {
++        uint32_t byte_addr_select = (addr & 2) ? BAS_IMVA_2_3 : BAS_IMVA_0_1;
++
++        // We have a thumb breakpoint
++        // We have an ARM breakpoint
++        m_state.dbg.__bcr[i] =
++            BCR_M_IMVA_MATCH | // Stop on address mismatch
++            byte_addr_select | // Set the correct byte address select so we only
++                               // trigger on the correct opcode
++            S_USER |           // Which modes should this breakpoint stop in?
++            BCR_ENABLE;        // Enable this hardware breakpoint
++        DNBLogThreadedIf(LOG_BREAKPOINTS,
++                         "DNBArchMachARM64::EnableHardwareBreakpoint( addr = "
++                         "0x%8.8llx, size = %llu ) - BVR%u/BCR%u = 0x%8.8x / "
++                         "0x%8.8x (Thumb)",
++                         (uint64_t)addr, (uint64_t)size, i, i,
++                         m_state.dbg.__bvr[i], m_state.dbg.__bcr[i]);
++      } else if (size == 4) {
++#endif
++      if (size == 4) {
++        // We have an ARM breakpoint
++        m_state.dbg.__bcr[i] = 1 | (1<<2) | (0xf << 5); // enabled | user
++#if 0
++        m_state.dbg.__bcr[i] =
++            BCR_M_IMVA_MATCH | // Stop on address mismatch
++            BAS_IMVA_ALL | // Stop on any of the four bytes following the IMVA
++            S_USER |       // Which modes should this breakpoint stop in?
++            BCR_ENABLE;    // Enable this hardware breakpoint
++#endif
++        DNBLogThreadedIf(LOG_BREAKPOINTS,
++                         "DNBArchMachARM64::EnableHardwareBreakpoint( addr = "
++                         "0x%8.8llx, size = %llu ) - BVR%u/BCR%u = 0x%8.8x / "
++                         "0x%8.8x (ARM)",
++                         (uint64_t)addr, (uint64_t)size, i, i,
++                         m_state.dbg.__bvr[i], m_state.dbg.__bcr[i]);
++      } else {
++        printf("invalid size for break point %d\n", size);
++      }
++
++      kret = SetDBGState(false);
++      DNBLogThreadedIf(LOG_BREAKPOINTS, "DNBArchMachARM64::"
++                                        "EnableHardwareBreakpoint() "
++                                        "SetDBGState() => 0x%8.8x.",
++                       kret);
++
++      if (kret == KERN_SUCCESS) {
++        printf("set hw breakpoint, returning index %d\n", i);
++        return i;
++      }
++    } else {
++      DNBLogThreadedIf(LOG_BREAKPOINTS,
++                       "DNBArchMachARM64::EnableHardwareBreakpoint(addr = "
++                       "0x%8.8llx, size = %llu) => all hardware breakpoint "
++                       "resources are being used.",
++                       (uint64_t)addr, (uint64_t)size);
++    }
++  }
++
++  return INVALID_NUB_HW_INDEX;
++}
++
++bool DNBArchMachARM64::DisableHardwareBreakpoint(nub_addr_t addr, nub_size_t size) {
++  printf("in DNBArchMachARM64::DisableHardwareBreakpoint to disable hw bp for addr: %llx size: %x\n", addr, size);
++  kern_return_t kret = GetDBGState(false);
++  if (kret != KERN_SUCCESS) {
++    printf("unable to get thread dbg state\n");
++    return false;
++  }
++    
++  const uint32_t num_hw_points = NumSupportedHardwareBreakpoints();
++
++  for (uint32_t i = 0; i < num_hw_points; i++){
++    if (m_state.dbg.__bvr[i] != addr) {
++      continue;
++    }
++    // i is the offset of a hw_breakpoint with this address
++    m_state.dbg.__bcr[i] = 0;
++    //DNBLogThreadedIf(LOG_BREAKPOINTS, "DNBArchMachARM64::DisableHardwareBreakpoint("
++    //                 " %u ) - BVR%u = 0x%8.8x  BCR%u = "
++    //                 "0x%8.8x",
++    //                 hw_index, hw_index, m_state.dbg.__bvr[hw_index],
++    //                 hw_index, m_state.dbg.__bcr[hw_index]);
++    printf("disabled hw breakpoint (found at offset %d in dbg state\n", i);
++    kret = SetDBGState(false);
++          
++    if (kret == KERN_SUCCESS) {
++      return true;
++    }
++  }
++  
++  return false;
++}
++
++std::vector<nub_addr_t> DNBArchMachARM64::GetHardwareBreakpointSummary() {
++  std::vector<nub_addr_t> bps;
++  
++  kern_return_t kret = GetDBGState(false);
++  if (kret != KERN_SUCCESS) {
++    printf("unable to get thread dbg state\n");
++    return bps;
++  }
++  
++  const uint32_t num_hw_points = NumSupportedHardwareBreakpoints();
++  
++  for (uint32_t i = 0; i < num_hw_points; i++){
++    nub_addr_t addr = m_state.dbg.__bvr[i];
++    if (m_state.dbg.__bcr[i] & BCR_ENABLE){
++      bps.push_back(addr);
++    }
++  }
++  
++  return bps;
++}
++  
++void DNBArchMachARM64::SetHardwareBreakpointSummary(std::vector<nub_addr_t> bps) {
++  kern_return_t kret = GetDBGState(false);
++  if (kret != KERN_SUCCESS) {
++    printf("unable to get thread dbg state\n");
++    return;
++  }
++  
++  // clear the current state:
++  const uint32_t num_hw_points = NumSupportedHardwareBreakpoints();
++  
++  for (uint32_t i = 0; i < num_hw_points; i++){
++    m_state.dbg.__bvr[i] = 0;
++    m_state.dbg.__bcr[i] = 0;
++  }
++  
++  SetDBGState(false);
++  
++  // set all the bps:
++  for (nub_addr_t addr : bps) {
++    EnableHardwareBreakpoint(addr, 4); // size is hardcoded for now - don't support anything other than 4 byte bp
++  }
++}
++
++  
++  
+ uint32_t DNBArchMachARM64::NumSupportedHardwareWatchpoints() {
+   // Set the init value to something that will let us know that we need to
+   // autodetect how many watchpoints are supported dynamically...
+diff --git a/tools/debugserver/source/MacOSX/arm64/DNBArchImplARM64.h b/tools/debugserver/source/MacOSX/arm64/DNBArchImplARM64.h
+index cde0abf42..f1baa4164 100644
+--- a/tools/debugserver/source/MacOSX/arm64/DNBArchImplARM64.h
++++ b/tools/debugserver/source/MacOSX/arm64/DNBArchImplARM64.h
+@@ -14,11 +14,13 @@
+ 
+ #include <mach/thread_status.h>
+ #include <map>
++#include <vector>
+ 
+ #if defined(ARM_THREAD_STATE64_COUNT)
+ 
+ #include "DNBArch.h"
+ 
++
+ class MachThread;
+ 
+ class DNBArchMachARM64 : public DNBArchProtocol {
+@@ -63,6 +65,16 @@ public:
+   static const uint8_t *SoftwareBreakpointOpcode(nub_size_t byte_size);
+   static uint32_t GetCPUType();
+ 
++  //PATCH:
++  //support for hardware breakpoints on ARM64
++  virtual uint32_t NumSupportedHardwareBreakpoints();
++  virtual uint32_t EnableHardwareBreakpoint(nub_addr_t addr, nub_size_t size);
++  virtual bool DisableHardwareBreakpoint(nub_addr_t addr, nub_size_t size);
++
++  virtual std::vector<nub_addr_t> GetHardwareBreakpointSummary();
++  virtual void SetHardwareBreakpointSummary(std::vector<nub_addr_t> bps);
++    
++    
+   virtual uint32_t NumSupportedHardwareWatchpoints();
+   virtual uint32_t EnableHardwareWatchpoint(nub_addr_t addr, nub_size_t size,
+                                             bool read, bool write,
+diff --git a/tools/debugserver/source/RNBRemote.cpp b/tools/debugserver/source/RNBRemote.cpp
+index cf6b4b626..9ae8dda3e 100644
+--- a/tools/debugserver/source/RNBRemote.cpp
++++ b/tools/debugserver/source/RNBRemote.cpp
+@@ -55,6 +55,8 @@
+ #include <sstream>
+ #include <unordered_set>
+ 
++#include <MacOSX/remote_sysctl.h>
++
+ //----------------------------------------------------------------------
+ // constants
+ //----------------------------------------------------------------------
+@@ -2999,8 +3001,10 @@ rnb_err_t RNBRemote::SendStopReplyPacketForThread(nub_thread_t tid) {
+  Often called the questionmark_packet.  */
+ 
+ rnb_err_t RNBRemote::HandlePacket_last_signal(const char *unused) {
++  printf("in handlepacket_last_signal\n");
+   if (!m_ctx.HasValidProcessID()) {
+     // Inferior is not yet specified/running
++      printf("sending  E02\n");
+     return SendPacket("E02");
+   }
+ 
+@@ -3018,7 +3022,9 @@ rnb_err_t RNBRemote::HandlePacket_last_signal(const char *unused) {
+   case eStateSuspended:
+   case eStateStopped:
+   case eStateCrashed: {
++      printf("getting current thread\n");
+     nub_thread_t tid = DNBProcessGetCurrentThread(pid);
++    printf("tid: %x\n", tid);
+     // Make sure we set the current thread so g and p packets return
+     // the data the gdb will expect.
+     SetCurrentThread(tid);
+@@ -3788,11 +3794,13 @@ rnb_err_t RNBRemote::HandlePacket_v(const char *p) {
+       return HandlePacket_UNIMPLEMENTED(p);
+     }
+ 
++    // PATCH:
++    // we have manually stopped the process, it didn't actually receive a signal
++      
+     if (attach_pid != INVALID_NUB_PROCESS) {
+       if (m_ctx.ProcessID() != attach_pid)
+         m_ctx.SetProcessID(attach_pid);
+-      // Send a stop reply packet to indicate we successfully attached!
+-      NotifyThatProcessStopped();
++      NotifyThatProcessStopped(); // PATCH (LEAVE THIS IN?)
+       return rnb_success;
+     } else {
+       m_ctx.LaunchStatus().SetError(-1, DNBError::Generic);
+@@ -3919,7 +3927,15 @@ rnb_err_t RNBRemote::HandlePacket_z(const char *p) {
+       // gdb can send multiple Z packets for the same address and
+       // these calls must be ref counted.
+       bool hardware = (break_type == '1');
+-
++      // PATCH
++      // force the use of hardware breakpointd
++        printf("received request for breakpoint at %llx\n", addr);
++        if (hardware) {
++            printf("request already for hardware bp\n");
++        } else {
++            printf("request was for software bp, forcing to hardware\n");
++            hardware = true;
++        }
+       if (DNBBreakpointSet(pid, addr, byte_size, hardware)) {
+         // We successfully created a breakpoint, now lets full out
+         // a ref count structure with the breakID and add it to our
+@@ -6000,8 +6016,9 @@ rnb_err_t RNBRemote::HandlePacket_qProcessInfo(const char *p) {
+   procpid_mib[3] = pid;
+   struct kinfo_proc proc_kinfo;
+   size_t proc_kinfo_size = sizeof(struct kinfo_proc);
+-
+-  if (::sysctl(procpid_mib, 4, &proc_kinfo, &proc_kinfo_size, NULL, 0) == 0) {
++  // PATCH
++  if (priv_sysctl(procpid_mib, 4, &proc_kinfo, &proc_kinfo_size, NULL, 0) == 0) {
++  //if (::sysctl(procpid_mib, 4, &proc_kinfo, &proc_kinfo_size, NULL, 0) == 0) {
+     if (proc_kinfo_size > 0) {
+       rep << "parent-pid:" << std::hex << proc_kinfo.kp_eproc.e_ppid << ';';
+       rep << "real-uid:" << std::hex << proc_kinfo.kp_eproc.e_pcred.p_ruid
+@@ -6152,8 +6169,11 @@ rnb_err_t RNBRemote::HandlePacket_qProcessInfo(const char *p) {
+ 
+         uint8_t arg_data[8192];
+         size_t arg_data_size = sizeof(arg_data);
+-        if (::sysctl(proc_args_mib, 3, arg_data, &arg_data_size, NULL, 0) ==
++        // PATCH
++        if (priv_sysctl(proc_args_mib, 3, arg_data, &arg_data_size, NULL, 0) ==
+             0) {
++        //if (::sysctl(proc_args_mib, 3, arg_data, &arg_data_size, NULL, 0) ==
++        //   0) {
+           DNBDataRef data(arg_data, arg_data_size, false);
+           DNBDataRef::offset_t offset = 0;
+           uint32_t argc = data.Get32(&offset);
+diff --git a/tools/debugserver/source/RNBSocket.cpp b/tools/debugserver/source/RNBSocket.cpp
+index 62a3e4f9a..59f8460a3 100644
+--- a/tools/debugserver/source/RNBSocket.cpp
++++ b/tools/debugserver/source/RNBSocket.cpp
+@@ -309,16 +309,19 @@ rnb_err_t RNBSocket::Read(std::string &p) {
+   // DNBLogThreadedIf(LOG_RNB_COMM, "%8u RNBSocket::%s calling read()",
+   // (uint32_t)m_timer.ElapsedMicroSeconds(true), __FUNCTION__);
+   DNBError err;
++  printf("about to read from fd: %d\n", m_fd); // PATCH
+   ssize_t bytesread = read(m_fd, buf, sizeof(buf));
+   if (bytesread <= 0)
+     err.SetError(errno, DNBError::POSIX);
+   else
+     p.append(buf, bytesread);
+ 
+-  if (err.Fail() || DNBLogCheckLogBit(LOG_RNB_COMM))
+-    err.LogThreaded("::read ( %i, %p, %llu ) => %i", m_fd, buf, sizeof(buf),
++  if (err.Fail() || DNBLogCheckLogBit(LOG_RNB_COMM)){
++    printf("read failed\n");
++    err.LogThreaded("::read (patched version)( %i, %p, %llu ) => %i", m_fd, buf, sizeof(buf),
+                     (uint64_t)bytesread);
+-
++  
++  }
+   // Our port went away - we have to mark this so IsConnected will return the
+   // truth.
+   if (bytesread == 0) {
+diff --git a/tools/debugserver/source/debugserver.cpp b/tools/debugserver/source/debugserver.cpp
+index 318e72e97..ad2932083 100644
+--- a/tools/debugserver/source/debugserver.cpp
++++ b/tools/debugserver/source/debugserver.cpp
+@@ -427,7 +427,7 @@ RNBRunLoopMode HandleProcessStateChange(RNBRemote *remote, bool initialize) {
+     return eRNBRunLoopModeExit;
+   }
+   nub_state_t pid_state = DNBProcessGetState(pid);
+-
++  printf("pid_state: %d\n", pid_state);
+   DNBLogThreadedIf(LOG_RNB_MINIMAL,
+                    "%s (&remote, initialize=%i)  pid_state = %s", __FUNCTION__,
+                    (int)initialize, DNBStateAsString(pid_state));
+@@ -512,7 +512,7 @@ RNBRunLoopMode RNBRunLoopInferiorExecuting(RNBRemote *remote) {
+ 
+   // Init our mode and set 'is_running' based on the current process state
+   RNBRunLoopMode mode = HandleProcessStateChange(remote, true);
+-
++  printf("HandleProcessStateChange returned %d\n", mode);
+   while (ctx.ProcessID() != INVALID_NUB_PROCESS) {
+ 
+     std::string set_events_str;
+@@ -894,6 +894,7 @@ static struct option g_long_options[] = {
+ // main
+ //----------------------------------------------------------------------
+ int main(int argc, char *argv[]) {
++  printf("hello debugserver!\n");
+   // If debugserver is launched with DYLD_INSERT_LIBRARIES, unset it so we
+   // don't spawn child processes with this enabled.
+   unsetenv("DYLD_INSERT_LIBRARIES");
+@@ -1641,6 +1642,7 @@ int main(int argc, char *argv[]) {
+ 
+     case eRNBRunLoopModeInferiorExecuting:
+       mode = RNBRunLoopInferiorExecuting(remote);
++      printf("RNBRunLoopInferiorExecuting returned %d\n", mode);
+       break;
+ 
+     case eRNBRunLoopModePlatformMode:
